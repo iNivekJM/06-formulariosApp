@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { BasicosComponent } from './basicos/basicos.component';
 import { DinamicosComponent } from './dinamicos/dinamicos.component';
@@ -15,10 +15,11 @@ const routes: Routes = [
       { path: '**', redirectTo: 'basicos' }
     ]
   }
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)]
+  imports: [
+    RouterModule.forChild(routes)
+  ]
 })
 export class ReactiveRoutingModule { }

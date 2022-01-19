@@ -5,42 +5,49 @@ interface MenuItem {
   ruta: string;
 }
 
+
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styles: [
+    `
+      li {
+        cursor:pointer;
+      }
+    `
   ]
 })
 export class SidemenuComponent {
 
   templateMenu: MenuItem[] = [
     {
-      texto: 'Basicos',
+      texto: 'Básicos',
       ruta: './template/basicos'
     },
     {
-      texto: 'Dinamicos',
+      texto: 'Dinámicos',
       ruta: './template/dinamicos'
     },
     {
       texto: 'Switches',
       ruta: './template/switches'
-    }
+    },
   ];
 
   reactiveMenu: MenuItem[] = [
     {
-      texto: 'Basicos',
+      texto: 'Básicos',
       ruta: './reactive/basicos'
     },
     {
-      texto: 'Dinamicos',
+      texto: 'Dinámicos',
       ruta: './reactive/dinamicos'
     },
     {
       texto: 'Switches',
       ruta: './reactive/switches'
-    }
+    },
   ];
+
 
 }
